@@ -9,4 +9,4 @@ jobs:
       #- run: isort .
       - uses: isort/isort-action@v0.1.0
         with:
-          configuration: -v .
+          configuration: -v
