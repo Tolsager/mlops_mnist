@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
-import torch.nn.functional as F
+
 import click
-import logging
-from pathlib import Path
-from dotenv import find_dotenv, load_dotenv
-import os
-
-import torch
 import numpy as np
-import os
+import torch
+import torch.nn.functional as F
+from dotenv import find_dotenv, load_dotenv
 
+import logging
+import os
+from pathlib import Path
 
 def npz_to_tensors(path: str) -> dict:
     npz_object = np.load(path)
