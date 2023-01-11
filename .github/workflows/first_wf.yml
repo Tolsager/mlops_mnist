@@ -1,4 +1,4 @@
-name: my first-workflow
+name: my-first-workflow
 on: [push]
 jobs: 
   job1:
@@ -8,3 +8,5 @@ jobs:
       #- run: pip install isort
       #- run: isort .
       - uses: isort/isort-action@v0.1.0
+        with:
+          configuration: -v .
