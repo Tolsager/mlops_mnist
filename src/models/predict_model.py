@@ -4,7 +4,7 @@ import sys
 import torch
 import click
 
-from src.data.make_dataset import get_image_and_label_tensors, MNISTDataset
+from src.data.make_dataset import MNISTDataset
 from src.models.model import MyAwesomeModel
 @click.group()
 def cli():
