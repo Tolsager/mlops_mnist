@@ -15,15 +15,7 @@ jobs:
     - name: Generate coverage report
       run: |
         pip install pytest
-        pip install pytest-cov
-        pytest --cov=./ --cov-report=xmp
+        pip install coverage
+        pytest coverage run -m pytest tests/
     - name: Upload coverage to codecov
       uses: codecov/codecov-action@v3.1.1
-      with:
-        directory: ./coverage/reports/
-        env_vars: OS,PYTHON
-        files: ./coverage1.xml,./coverage2.xml
-        flags: pytest
-        name: codecov-umbrella
-        path_to_write_report: ./coverage/codecov_report.txt
-        verboxe: true
