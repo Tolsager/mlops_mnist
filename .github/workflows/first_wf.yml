@@ -5,5 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: pip install isort
-      - run: isort .
+      #- run: pip install isort
+      #- run: isort .
+      - uses: isort/isort-action@v1
