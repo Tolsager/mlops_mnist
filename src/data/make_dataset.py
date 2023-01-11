@@ -10,6 +10,7 @@ import torch
 import numpy as np
 import os
 
+
 def npz_to_tensors(path: str) -> dict:
     npz_object = np.load(path)
     images = npz_object['images']
