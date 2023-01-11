@@ -1,0 +1,9 @@
+name: ${{ github.actor}}'s first-workflow
+on: [push]
+jobs: 
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: pip install isort
+      - run: isort .
