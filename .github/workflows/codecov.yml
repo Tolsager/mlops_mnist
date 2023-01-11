@@ -2,7 +2,7 @@ name: Codecov
 on: [push]
 jobs:
   run:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     env:
       OS: ubuntu-latest
       PYTHON: '3.9'
