@@ -1,2 +1,28 @@
 name: Codecov
-uses: codecov/codecov-action@v3.1.1
+on: [push]
+jobs:
+  run:
+    runs_on: ubuntu-latest
+    env:
+      OS: ubuntu-latest
+      PYTHON: '3.9'
+    steps:
+    - uses: actions/checkout@master
+    - name: Setup Python
+    - uses: actions/setup-python@master
+      with:
+        python-version: 3.9
+    - name: Generate coverage report
+      run: |
+        pip install pytest
+        pip install pytest-cov
+        pytest --cov=./ --cov-report=xmp
+    - name: Upload coverage to codecov
+      uses: codecov/codecov-action@v3.1.1
+      directory: ./coverage/reports/
+      env_vars: OS,PYTHON
+      files: ./coverage1.xml,./coverage2.xml
+      flags: pytest
+      name: codecov-umbrella
+      path_to_write_report: ./coverage/codecov_report.txt
+      verboxe: true
