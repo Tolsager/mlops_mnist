@@ -1,5 +1,5 @@
 # my ignores
-models/
+models/*
 !models/.gitkeep
 
 # Byte-compiled / optimized / DLL files
