@@ -1,5 +1,6 @@
 # my ignores
 models/
+!models/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -92,5 +93,3 @@ target/
 # Mypy cache
 .mypy_cache/
 /data
-
-!*.gitkeep
